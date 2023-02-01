@@ -11,31 +11,38 @@ const Topbar = () => {
       <div className={styles.topbarLeft}>
         <span className={styles.logo}>Social App</span>
       </div>
-      <div className={styles.topbarCentre}>
-        <SearchIcon />
-        <input className={styles.searchInput} placeholder="Search For" />
+      <div className={styles.topbarCenter}>
+        <div className={styles.searchbar}>
+          <SearchIcon className={styles.searchicon} />
+          <input className={styles.searchInput} placeholder="Search For" />
+        </div>
       </div>
 
-      <div className={styles.topbarRight}></div>
-      <div className={styles.topbarLinks}>
-        <span className={styles.topbarLink}>Homepage</span>
-        <span className={styles.topbarLink}>Timeline</span>
+      <div className={styles.topbarRight}>
+        <div className={styles.topbarLinks}>
+          <span className={styles.topbarLink}>Homepage</span>
+          <span className={styles.topbarLink}>Timeline</span>
+        </div>
+        <div className={styles.topbarIcons}>
+          <div className={styles.topbarIconItem}>
+            <PersonIcon />
+            <span className={styles.topbarIconBadge}>1</span>
+          </div>
+          <div className={styles.topbarIconItem}>
+            <ChatBubbleIcon />
+            <span className={styles.topbarIconBadge}>1</span>
+          </div>
+          <div className={styles.topbarIconItem}>
+            <NotificationAddIcon />
+            <span className={styles.topbarIconBadge}>1</span>
+          </div>
+        </div>
+        <img
+          src="/assets/person/person1.jpg"
+          alt=""
+          className={styles.topbarImg}
+        />
       </div>
-      <div className={styles.topbarIcons}>
-        <div className={styles.topbarIconItem}>
-          <PersonIcon />
-          <span className={styles.topbarIconBadge}>1</span>
-        </div>
-        <div className={styles.topbarIconItem}>
-          <ChatBubbleIcon />
-          <span className={styles.topbarIconBadge}>1</span>
-        </div>
-        <div className={styles.topbarIconItem}>
-          <NotificationAddIcon />
-          <span className={styles.topbarIconBadge}>1</span>
-        </div>
-      </div>
-      <img src="" alt="" className={styles.topbarImg} />
     </div>
   );
 };
